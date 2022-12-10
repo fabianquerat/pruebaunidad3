@@ -1,0 +1,26 @@
+<h1>Formulario Usuario</h1>
+
+<form [formGroup]="formulario" method="POST">
+    <div class="form-group">
+        <label>Nombre:</label>
+        <input type="text" placeholder="nombre" name="nombre" formControlName="nombre" required> <br><br>
+
+        <small *ngIf="formularioReactivo.nombre?.errors?.required && formularioReactivo.nombre.touched">Nombre es requerido</small>
+
+        <label>Apellido:</label>
+        <input type="text" placeholder="apellido" name="apellido" formControlName="apellido">
+        <small *ngIf="formularioReactivo.apellido?.errors?.required && formularioReactivo.apellido.touched">Apellido es requerido</small><br><br>
+
+        <label>Rut:</label>
+        <input type="text" placeholder="rut" name="rut" formControlName="rut"><br><br>
+
+        <label>Correo:</label>
+        <input type="text" placeholder="correo" name="correo" formControlName="correo"><br><br>
+
+        <label>Password:</label>
+        <input type="password" placeholder="password" name="password" formControlName="password"><br><br>
+
+        <button class="btn btn-primary" type="submit" (click)="registrar()">Enviar</button>
+
+    </div>
+</form>

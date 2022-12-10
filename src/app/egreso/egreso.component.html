@@ -1,0 +1,20 @@
+<h1>Formulario Egreso</h1>
+
+<form [formGroup]="formulario" method="POST">
+    <div class="form-group">
+        <label>Descripcion:</label>
+        <input type="text" placeholder="descripcion" name="descripcion" formControlName="descripcion" required> <br><br>
+
+        <small *ngIf="formularioReactivo.descripcion?.errors?.required">descripcion es requerido</small>
+
+        <label>Precio:</label>
+        <input type="number" placeholder="precio" name="precio" formControlName="precio">
+        <br><br>
+
+        <label>Id_usuario:</label>
+        <input type="text" placeholder="id_usuario" name="id_usuario" formControlName="id_usuario"><br><br>
+
+        <button class="btn btn-primary" type="submit" (click)="enviarDatos()">Enviar</button>
+
+    </div>
+</form>

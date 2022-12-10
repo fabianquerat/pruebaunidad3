@@ -1,0 +1,22 @@
+<p>ver-usuarios works!</p>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">rut</th>
+        <th scope="col">nombre</th>
+        <th scope="col">apellido</th>
+        <th scope="col">correo</th>
+        <th scope="col">password</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dato of usuario">
+        <td>{{dato.rut}}</td>
+        <td>{{dato.nombre}}</td>
+        <td>{{dato.apellido}}</td>
+        <td>{{dato.correo}}</td>
+        <td>{{dato.password}}</td>
+      </tr>
+    </tbody>
+  </table>
